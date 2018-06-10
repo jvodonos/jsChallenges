@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>First Recurring Character</title>
+	</head>
+	<body>
+
+	</body>
+	<script>
+		function recurringCharacter(eval)
+		{
+			var fc;
+			eval = eval.split("");
+			eval.forEach((el, ix) =>
+			{
+				eval.forEach((iel, iix) =>
+				{
+					if(el == iel && !(ix == iix))
+					{
+						fc = el;
+					}
+				});
+			});
+			return fc;
+		}
+
+		console.log(recurringCharacter("aasd"));
+	</script>
+</html>
